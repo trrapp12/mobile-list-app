@@ -9,3 +9,7 @@ export function resetInputField(el) {
 export function displayList (el, value) {
     el.innerHTML += `<li>${value}</li>`
 }
+
+export function clearList (el) {
+    el.innerHTML = ""
+}
