@@ -1,4 +1,4 @@
-export function displayInput(el) {
+export function getInput(el) {
     return el.value;
 }
 
