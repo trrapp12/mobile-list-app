@@ -1,0 +1,7 @@
+# macOS Files
+.DS_Store
+node_modules/
+node_modules
+logs/
+dist
+/.vscode

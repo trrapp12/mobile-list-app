@@ -1,0 +1,19 @@
+{
+  "name": "rapp_mobile_list",
+  "version": "1.0.0",
+  "description": "a perosnal project that uses user input to generate a todo list, completed as part of Scrimba curriculum",
+  "main": "index.html",
+  "scripts": {
+    "test": "run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trrapp12/mobile-list-app.git"
+  },
+  "author": "Trevor Rapp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trrapp12/mobile-list-app/issues"
+  },
+  "homepage": "https://github.com/trrapp12/mobile-list-app#readme"
+}
