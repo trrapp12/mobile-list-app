@@ -22,8 +22,8 @@ onValue(itemsInListInDB, (snapshot) => {
     let itemsArray = Object.entries(snapshot.val())
     console.log(itemsArray)
     itemsArray.map(item => {
-        currentItemKey = item[0]
-        currentItemValue = item[1]
+        currentItemKey = item[0];
+        currentItemValue = item[1];
         displayList(shoppingListContainer, currentItemValue)
         console.log(item[0])
     })
