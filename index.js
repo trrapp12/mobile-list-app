@@ -16,10 +16,17 @@ const database = getDatabase(app);
 const itemsInListInDB = ref(database, 'items');
 
 onValue(itemsInListInDB, (snapshot) => {
+    let currentItemKey;
+    let currentItemValue;
     clearList(shoppingListContainer);
-    let itemsArray = Object.values(snapshot.val())
+    let itemsArray = Object.entries(snapshot.val())
     console.log(itemsArray)
-    itemsArray.map(item => displayList(shoppingListContainer, item))
+    itemsArray.map(item => {
+        currentItemKey = item[0]
+        currentItemValue = item[1]
+        displayList(shoppingListContainer, currentItemValue)
+        console.log(item[0])
+    })
     resetInputField(inputFieldEl);
 })
 // console.log(app);

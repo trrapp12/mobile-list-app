@@ -7,7 +7,10 @@ export function resetInputField(el) {
 }
 
 export function displayList (el, value) {
-    el.innerHTML += `<li>${value}</li>`
+    let newItemEl = document.createElement('li');
+    let itemText = value
+    newItemEl.textContent = itemText;
+    el.append(newItemEl)
 }
 
 export function clearList (el) {
