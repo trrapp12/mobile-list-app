@@ -37,7 +37,7 @@ The mission of checkOUT is to inspire you to checkoff your bucket list before yo
 
 ### THIS PROJECT DEMONSTRATES...
 
-🆕 CRUD functionality with a firebase database
+🆕 CRD (create, read, delete) functionality with a firebase database
 
 🆕 Utilizing getDatabase(), ref(), push(), onValue(), and remove() methods for firebase database
 
