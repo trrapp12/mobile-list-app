@@ -33,7 +33,29 @@ The mission of checkOUT is to inspire you to checkoff the most before you checko
 
 🆕 Use of Canvas API
 
-🆕 use of basic JavaScript principles like loops and conditionals to create a randomized, regenerating pattern.
+🆕 Use of basic JavaScript principles like loops and conditionals to create a randomized, regenerating pattern.
+
+🆕 CRUD functionality with a firebase database
+
+🆕 Utilizing getDatabase(), ref(), push(), onValue(), and remove() methods for firebase database
+
+🆕 Creating and importing utility functions
+
+🆕 Dynamically creating, assigning attributes, and appending nested elements in vanilla javascript
+
+🆕 Using webmanifest
+
+🆕 Converting objects to arrays
+
+🆕 Mapping through arrays
+
+🆕 String literals 
+
+🆕 Flex-box
+
+🆕 Responsive, mobile first design
+
+🆕 Utilizing git and github for CVN
 
 ---
 
