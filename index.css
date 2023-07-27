@@ -73,17 +73,36 @@ html {
 
 button {
     padding: 0em .75em;
-    border-radius: 8px;
     border: none;
-    font-size: 3em;
+    font-size: 1.5em;
     border: 2px solid;
-    min-width: 100%;
+    flex-grow: 1;
+    border-radius: 0px 10px 10px 0px;
+}
+
+button:hover {
+    background-color: var(--bold-blue-opacity);
+    color: white;
 }
 
 body,
 html {
     min-height: 100vh;
     min-width: 100vw;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: sticky;
+    top: calc(100vh - 6em);
+    height: fit-content;
+    padding: 4em;
+    background-color: var(--neutral-brown);
+    z-index: -20;
+    border-top: 5px solid;
+    justify-content: flex-start;
 }
 
 h1 {
@@ -113,16 +132,28 @@ input {
     text-transform: uppercase;
     letter-spacing: 10px;
     padding-top: 5px;
+    max-width: 75%;
+    letter-spacing: 1px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.input-container>input {
+    color: var(--bold-blue-opacity);
+}
+
+.attribution {
+    z-index: 19;
+    padding: 0px 0px 0px 12em;
 }
 
 .input-container {
     display: flex;
-    justify-content: space-between;
-    gap: 1em;
+    /* justify-content: space-between; */
+    /* gap: 1em; */
     flex-wrap: wrap;
-    max-width: 75%;
+    /* max-width: 75%; */
     margin: auto;
-    width: 100%;
+    width: 75%;
     margin: auto auto 3em auto;
 }
 
@@ -193,12 +224,12 @@ main {
     background-image: url('./assets/memento-mori.png');
     background-origin: border-box;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: auto 100%;
     background-position-x: center;
     background-position-y: center;
     background-blend-mode: lighten;
     position: absolute;
-    width: 71%;
+    width: 481px;
     border-radius: 45px;
     height: 100%;
     top: 10%;
