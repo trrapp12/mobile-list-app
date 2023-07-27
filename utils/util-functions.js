@@ -18,3 +18,4 @@ export function validateEntry (expression, value, errormessage) {
         return false;
     }
 }
+
