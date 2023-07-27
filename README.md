@@ -16,3 +16,4 @@ Photo by Tirachard Kumtanom: https://www.pexels.com/photo/assorted-color-metal-c
 Photo by Anni Roenkae: https://www.pexels.com/photo/blue-petaled-flower-2382738/
 Photo by Alex Andrews: https://www.pexels.com/photo/four-gray-textiles-821649/
 Photo by Adrien Olichon: https://www.pexels.com/photo/grey-abstract-wallpaper-3137052/
+<a href="https://www.flaticon.com/free-icons/skull" title="skull icons">Skull icons created by Smashicons - Flaticon</a>

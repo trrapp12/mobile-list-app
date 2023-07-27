@@ -5,6 +5,10 @@
     <title>CheckOut</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -19,12 +23,15 @@
     </div>
     <main>
         <div class="input-container">
-            <input id="input-field" type="text" name="input-field" placeholder="item">
+            <input id="input-field" type="text" name="input-field" placeholder="type item here">
             <button id="add-button">+</button>
         </div>
-        <div class="shopping-list" id="shopping-list"></div>
+        <div class="todo-list" id="todo-list"></div>
     </main>
+    <a href="https://www.flaticon.com/free-icons/skull" title="skull icons">Skull icons created by Smashicons -
+        Flaticon</a>
     <script src="index.js" type="module"></script>
+    <script src="./utils/eventListeners.js" type="module"></script>
 </body>
 
 </html>
