@@ -135,6 +135,7 @@ input {
     width: 75%;
     letter-spacing: 1px;
     border-radius: 10px 0px 0px 10px;
+    height: 50px;
 }
 
 input[type="checkbox"] {
@@ -246,4 +247,8 @@ main {
     background-color: var(--bold-blue-opacity);
     padding: 1em;
     border: 5px solid #ffffff90;
+}
+
+::placeholder {
+    color: var(--bold-blue-opacity)
 }
