@@ -121,9 +121,12 @@ window.addEventListener('load', () => {
 
 ### MY OWN PERSONAL CONTRIBUTIONS INCLUDED 
 
-- [ ] creating the random, ranged timing interval
-- [ ] creating an animation effect that randomly chooses a color scheme for the blocks
-- [ ] fixing the functionality so it would rerender on window resizeand the additionaly decoration on the pages.
+- [X] complete graphic redesign
+- [X] instead of dynamically creating one element, built it out to dynamically build out a nested element that also dynamically assigned classes, attributes, and added an eventlistener
+- [X] using Javascript to imitate a "hover" effect in CSS
+- [X] simplifying and refactoring code and breaking it out into a utility function file
+- [ ] gamification principles
+- [ ] Oauth
 
 ---
 
