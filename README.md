@@ -67,43 +67,57 @@ The mission of checkOUT is to inspire you to checkoff your bucket list before yo
 
 ### CHALLENGES I OVERCAME...
 
-This was the first time I used Canvas.  So it was a completely new experience.  The most obvious obstacle is learning the syntax.  After that there was a bit of conceptualizing how to create a grid of boxes that needed to occur through a nested for loop.  
+* This was my first time in quite a while connecting to a Firebase database.  I had to reacquaint myself with it.  The process wasn't necessarily very hard, but it was probably the area I experienced the most growth as I had little exprience in it before.
 
-But by far the most challenging was creating a timing function that would work dynamically so the interval on setInterval would be different everytime, but only with a range of 0 - 5 seconds.  My first attempt to accomplish this I created the following: 
+* In the original instructions they created an eventlistener on a single dynamically created element so that when you double clicked on a list item it removed it from the list and the database.  For the sake of practice I decided to extend the process by adding a check mark which would have to detect the click, do a logic comparison to see if it's checked, and then remove the item.  While the logic isn't hard, it did require me to dynamically make a nested group of elements, along with dynamically assigning them id's and attributes and classes and then append an eventlistener onto them.  This added a few more steps of complexity than what hte original tutorial demanded.
 
 ```javascript  
 
-    function setTimer() {
-         const maxDelay = 2500;
-         const delay = Math.floor(Math.random() * 2 + 1) * maxDelay;
-         setInterval(() => {
-             renderSquares()
-             setTimer()
-         }, delay)
-    }
+function createList (el, value, id) {
+    let newDiv = document.createElement('div');
 
-    setTimer()
+    let newCheckBox = document.createElement('input')
+    newCheckBox.setAttribute('type', 'checkbox')
+    newCheckBox.setAttribute('id', `${id}`)
+
+    let newItemListItem = document.createElement('li');
+    let itemText = value
+    newItemListItem.textContent = itemText;
+
+    newDiv.append(newCheckBox)
+    newDiv.classList.add('list-div')
+    newDiv.append(newItemListItem)
+    el.append(newDiv)
+
+    newCheckBox.addEventListener('click', (event) => {
+        if(event.currentTarget.checked) {
+            console.log('checked', event.currentTarget)
+            let refLocationDB = ref(database, `items/${id}`);
+            remove(refLocationDB)
+        } else {
+            console.log('item is not checked')
+        }
+    })
+}
     
 ```
-    
-My thought was to create a delay with `(Math.floor(Math.random() * 2) + 1 * maxDelay` where `maxDelay = 2500`.  This was unsucessful 1) because the `+1` served no purpose, and 2) because the `Math.floor()` created a situation where it would only return 1 or 5 since the 2 was always getting rounded down to either 0 or 1.  The second issue was that the timing function would start with a random interval, but eventually it would gradually speed up more and more until it became sickenly fast.  I thought at first it was because timesing something by a fraction over and over again will ultimately make it smaller and smaller.  However, when I console.log'ed the issue the interval times were fine.  Then I realized what was happening was every time the function fired it created a separate setInterval instance.  So I had to figure out how to clear them.  I could just add a `clearInterval()` since they were named.  So I discovered I could loop over the window object to find all the intervals and clear them all before setting a new one. This answer worked swimmingly.  The final timer function was this: 
+* setting up an eventlistener that resembles a hover on a button, but that increases the scale of a background image to make it appear to "pop" out at you.  Normally the hover would be a simple ```:hover``` in CSS.  But to listen to something on element "A" that effects element "B" can't be accomplished by CSS.  But Javascript doesn't have a "hover" event.  Enter "mouseenter" and "mouseleave".  And how do you make sure the listener is applied after all elements are on the page?  I had to wrap it in another load eventlistener on the window object.
 
 ```javascript
 
-    function setTimer() {
-        const maxDelay = 2500;
-        const delay = (Math.random() * 2) * maxDelay;
-        console.log(delay)
-        setInterval(() => {
-            for (let i = 0; i < 99999; i++) {
-                window.clearInterval(i)
-            }
-            renderSquares()
-            setTimer()
-        }, delay)
-    }
+window.addEventListener('load', () => {
 
-    setTimer()
+    const playingCardDiv = document.querySelector('.playing-card')
+    const addButton = document.querySelector('#add-button')
+
+    addButton.addEventListener('mouseover', () => {
+        playingCardDiv.style.transform = 'scale(1.02)'
+    })
+
+    addButton.addEventListener('mouseleave', () => {
+        playingCardDiv.style.transform = 'scale(1.0)'
+    })
+})
 
 ```
 
