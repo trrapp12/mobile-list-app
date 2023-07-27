@@ -78,6 +78,7 @@ button {
     border: 2px solid;
     flex-grow: 1;
     border-radius: 0px 10px 10px 0px;
+    max-width: 25%;
 }
 
 button:hover {
@@ -132,7 +133,7 @@ input {
     text-transform: uppercase;
     letter-spacing: 10px;
     padding-top: 5px;
-    max-width: 75%;
+    width: 75%;
     letter-spacing: 1px;
     border-radius: 10px 0px 0px 10px;
 }
