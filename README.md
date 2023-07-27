@@ -37,10 +37,6 @@ The mission of checkOUT is to inspire you to checkoff your bucket list before yo
 
 ### THIS PROJECT DEMONSTRATES...
 
-🆕 Use of Canvas API
-
-🆕 Use of basic JavaScript principles like loops and conditionals to create a randomized, regenerating pattern.
-
 🆕 CRUD functionality with a firebase database
 
 🆕 Utilizing getDatabase(), ref(), push(), onValue(), and remove() methods for firebase database
