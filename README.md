@@ -26,7 +26,12 @@ https://user-images.githubusercontent.com/11747875/222486766-c540a42b-b98d-4825-
 >
 > — Ryan Holiday, Daily Stoic.
 
-The mission of checkOUT is to inspire you to checkoff the most before you checkout of life.
+The mission of checkOUT is to inspire you to checkoff your bucket list before you checkout of life.  It does it by:
+
+* providing a progressive web app with CRD (create, read, delete) functionality that fits in the palm of your hand
+* adds distinctive rewards when you complete your tasks
+* provides it in a well designed, mobile-first, responsive layout
+
 ---
 
 ### THIS PROJECT DEMONSTRATES...
