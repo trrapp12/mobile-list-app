@@ -1,11 +1,13 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js'
 import { getDatabase, ref, push, onValue, remove } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js'
-import { getInput, resetInputField, clearList} from './utils/util-functions.js'
+import { getInput, resetInputField, clearList, validateEntry} from './utils/util-functions.js'
 
 // set up constants
 const inputFieldEl = document.getElementById('input-field');
 const addButtonEl = document.getElementById('add-button');
 const shoppingListContainer = document.querySelector('#todo-list');
+const re = new RegExp('[!#$%\^\*()\\\/\{\}`~\<\>_]');
+const errorMessageText = 'error: cannot accept the following characters...!#$%^*()\/{}`~<>_'
 
 // setup Firebase app
 const appSettings ={
@@ -30,7 +32,6 @@ onValue(itemsInListInDB, (snapshot) => {
             console.log(item[0])
         })
     } else {
-        
         shoppingListContainer.innerHTML = 'No items here...yet!'
     }
 
@@ -41,8 +42,14 @@ onValue(itemsInListInDB, (snapshot) => {
 
 addButtonEl.addEventListener('click', function() {
     let inputValue = getInput(inputFieldEl);
-    push(itemsInListInDB, inputValue);
-    console.log(`${inputValue} added to database`);
+
+    if (validateEntry(re, inputValue, errorMessageText)) {
+        push(itemsInListInDB, inputValue);
+        console.log(`${inputValue} added to database`);
+    } else {
+        console.log('invalid entry: following characters are not accepted...^!#$%*()/\{}`~<>_')
+    }
+
 })
 
 function createList (el, value, id) {
