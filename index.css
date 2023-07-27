@@ -124,7 +124,6 @@ header>nav>ul>li {
 }
 
 input {
-    height: 50px;
     border: 2px solid var(--bright-pink);
     text-align: center;
     font-size: 1.5em;
@@ -138,8 +137,10 @@ input {
     border-radius: 10px 0px 0px 10px;
 }
 
-.input-container>input {
-    color: var(--bold-blue-opacity);
+input[type="checkbox"] {
+    height: 50px;
+    width: auto;
+    padding: 0;
 }
 
 .attribution {
@@ -147,12 +148,19 @@ input {
     padding: 0px 0px 0px 12em;
 }
 
+.checkout {
+    font-size: 6em;
+    font-family: 'jellyka_castles_queenregular';
+    color: var(--bright-pink);
+}
+
+.input-container>input {
+    color: var(--bold-blue-opacity);
+}
+
 .input-container {
     display: flex;
-    /* justify-content: space-between; */
-    /* gap: 1em; */
     flex-wrap: wrap;
-    /* max-width: 75%; */
     margin: auto;
     width: 75%;
     margin: auto auto 3em auto;
@@ -189,34 +197,26 @@ main {
     background-color: var(--bold-blue-opacity);
     padding: 1em;
     border: 5px solid #ffffff90;
-    /* align-content: center; */
     width: 75%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    /* flex-grow: 1; */
     gap: 1em;
     justify-content: space-evenly;
 }
 
 .list-div {
-    list-style-type: none;
     padding: 0px 20px;
-    max-width: fit-content;
+    width: fit-content;
     border-radius: 8px;
     flex-grow: 1;
     display: flex;
     backdrop-filter: blur(10px);
-    border-bottom: 2px solid #FFFFFF10;
     align-items: center;
     gap: 20px;
+    justify-content: center;
 }
 
-.checkout {
-    font-size: 6em;
-    font-family: 'jellyka_castles_queenregular';
-    color: var(--bright-pink);
-}
 
 .playing-card {
     display: block;
@@ -246,5 +246,4 @@ main {
     background-color: var(--bold-blue-opacity);
     padding: 1em;
     border: 5px solid #ffffff90;
-    /* align-content: center; */
 }
