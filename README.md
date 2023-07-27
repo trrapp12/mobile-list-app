@@ -39,6 +39,8 @@ The mission of checkOUT is to inspire you to checkoff your bucket list before yo
 
 🆕 CRD (create, read, delete) functionality with a firebase database
 
+🆕 deploy progressive web app to Netlify
+
 🆕 Utilizing getDatabase(), ref(), push(), onValue(), and remove() methods for firebase database
 
 🆕 Creating and importing utility functions
