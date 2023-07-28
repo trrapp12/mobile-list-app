@@ -99,6 +99,7 @@ function createList (el, value, id) {
 }
     
 ```
+
 * setting up an eventlistener that resembles a hover on a button, but that increases the scale of a background image to make it appear to "pop" out at you.  Normally the hover would be a simple ```:hover``` in CSS.  But to listen to something on element "A" that effects element "B" can't be accomplished by CSS.  But Javascript doesn't have a "hover" event.  Enter "mouseenter" and "mouseleave".  And how do you make sure the listener is applied after all elements are on the page?  I had to wrap it in another load eventlistener on the window object.
 
 ```javascript
