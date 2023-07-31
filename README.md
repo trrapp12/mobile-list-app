@@ -144,7 +144,7 @@ window.addEventListener('load', () => {
 
 ---
 
-### Attributions
+### ATTRIBUTIONS
 
 <a href="https://www.flaticon.com/free-icons/skull" title="skull icons">Skull icons created by Smashicons - Flaticon</a>
 
