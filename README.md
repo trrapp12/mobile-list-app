@@ -35,6 +35,12 @@ The mission of checkOUT is to inspire you to checkoff your bucket list before yo
 
 ---
 
+### Quickstart guide: 
+
+To use the app simply click on the ```View Project``` button or visit https://gentle-monstera-8c285d.netlify.app/. 
+
+---
+
 ### THIS PROJECT DEMONSTRATES...
 
 🆕 CRD (create, read, delete) functionality with a firebase database
@@ -128,6 +134,7 @@ window.addEventListener('load', () => {
 - [X] instead of dynamically creating one element, built it out to dynamically build out a nested element that also dynamically assigned classes, attributes, and added an eventlistener
 - [X] using Javascript to imitate a "hover" effect in CSS
 - [X] simplifying and refactoring code and breaking it out into a utility function file
+- [X] AI generated artwork
 - [ ] gamification principles
 - [ ] Oauth
 
@@ -141,17 +148,11 @@ Original project a part of the [Scrimba Front-End Development Career Path](https
 
 ---
 
-### Quick start:
-
-```
-$ npm install
-$ npm start
-````
----
-
-### Photo Attribution
+### Attributions
 
 <a href="https://www.flaticon.com/free-icons/skull" title="skull icons">Skull icons created by Smashicons - Flaticon</a>
+
+Memento Mori is AI generated artwork by Trevor Rapp using <a href="https://www.imagine.art/">Imagine Art</a>.
 
 ---
 
