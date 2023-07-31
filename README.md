@@ -45,7 +45,7 @@ To use the app simply click on the ```View Project``` button or visit https://ge
 
 ---
 
-### THIS PROJECT DEMONSTRATES...
+### THIS PROJECT DEMONSTRATES:
 
 🆕 CRD (create, read, delete) functionality with a firebase database
 
