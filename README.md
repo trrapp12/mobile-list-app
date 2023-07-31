@@ -144,14 +144,6 @@ window.addEventListener('load', () => {
 
 ---
 
-### CREDITS:
-
-Contributors: Trevor Rapp
-
-Original project a part of the [Scrimba Front-End Development Career Path](https://scrimba.com/playlist/pdgan3KAp).
-
----
-
 ### Attributions
 
 <a href="https://www.flaticon.com/free-icons/skull" title="skull icons">Skull icons created by Smashicons - Flaticon</a>
