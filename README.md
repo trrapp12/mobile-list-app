@@ -137,8 +137,7 @@ window.addEventListener('load', () => {
 
 Contributors: Trevor Rapp
 
-Project inspired by [Creative Coding: Making Visuals with JavaScript](https://www.domestika.org/en/courses/2729-creative-coding-making-visuals-with-javascript) by [Bruno Imbrizi](https://www.domestika.org/en/bruno_imbrizi)
-
+Original project a part of the [Scrimba Front-End Development Career Path](https://scrimba.com/playlist/pdgan3KAp).
 
 ---
 
