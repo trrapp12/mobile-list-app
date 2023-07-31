@@ -1,5 +1,7 @@
 # checkOUT before you CHECKout
 
+### Contributors: Trevor Rapp, based on a [Scrimba Project](https://scrimba.com/learn/frontend/lets-build-a-mobile-app-with-firebase-coafc415fb8e007eadfa60822) by Rafid Hoda.  
+
 [https://user-images.githubusercontent.com/11747875/222486766-c540a42b-b98d-4825-a53a-0508b19b3f8c.mp4](https://user-images.githubusercontent.com/11747875/256679378-bbc466f8-ede7-4bf7-bad8-e68ce6cd67d9.mov)
 
 <br>
