@@ -37,11 +37,6 @@ The mission of checkOUT is to inspire you to checkoff your bucket list before yo
 * adds distinctive rewards when you complete your tasks
 * provides it in a well designed, mobile-first, responsive layout
 
----
-
-### QUICKSTART GUIDE: 
-
-To use the app simply click on the ```View Project``` button or visit https://gentle-monstera-8c285d.netlify.app/. 
 
 ---
 
