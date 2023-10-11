@@ -1,12 +1,22 @@
 import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, push, onValue, remove } from 'firebase/database'
-import { getInput, resetInputField, clearList, validateEntry} from './utils/util-functions.js'
+import { getDatabase, 
+    ref, 
+    push, 
+    onValue, 
+    remove 
+} from 'firebase/database'
+import { getInput, 
+    resetInputField, 
+    clearList,
+     validateEntry
+    } from './utils/util-functions.js'
 import { getAuth, 
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     signInWithPopup,
     GoogleAuthProvider,
-    signOut
+    signOut,
+    onAuthStateChanged
 } from "firebase/auth";
 
 console.log('index.js fired')
@@ -28,8 +38,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const user = auth.currentUser;
+let userI
 const provider = new GoogleAuthProvider();
 
+if (user) {
+    const userID = user.uid
+}
 
 
 // ********************  CONSTANTS  ********************  
@@ -72,6 +86,7 @@ function authSignInWithGoogle () {
     // google redirects needs to be called when the page loads
     signInWithPopup(auth, provider)
         .then((result) => {
+            console.log('signed in with google')
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
@@ -80,7 +95,6 @@ function authSignInWithGoogle () {
         // IdP data available using getAdditionalUserInfo(result)
         // ...
         clearAuthFields();
-        showLoggedInView();
     }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
@@ -103,7 +117,6 @@ function signInEmailPassword () {
       // Signed in 
       const user = userCredential.user;
       clearAuthFields()
-      showLoggedInView();
       // ...
     })
     .catch((error) => {
@@ -112,6 +125,20 @@ function signInEmailPassword () {
       console.error(errorCode + " : " + errorMessage)
     });
 }
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/auth.user
+      showLoggedInView();
+      const uid = user.uid;
+      // ...
+    } else {
+        showloggedOutView();
+      // User is signed out
+      // ...
+    }
+  });
 
 // Initialize Firebase Authentication and get a reference to the service
 function createUserEmailPassword () {
@@ -123,7 +150,6 @@ function createUserEmailPassword () {
           const user = userCredential.user;
           // ...
           clearAuthFields()
-          showLoggedInView();
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -137,7 +163,6 @@ function signOutMethod() {
     console.log('sign out Method called')
     signOut(auth).then(() => {
         // Sign-out successful.
-        showloggedOutView()
       }).catch((error) => {
         // An error happened.
         console.error(error.message)
@@ -174,7 +199,7 @@ function clearAuthFields() {
 // setup Firebase app
 
 const database = getDatabase(app);
-const itemsInListInDB = ref(database, 'items');
+const itemsInListInDB = ref(database, `items/${user.uid}`);
 
 onValue(itemsInListInDB, (snapshot) => {
     let currentItemKey;
@@ -200,9 +225,11 @@ onValue(itemsInListInDB, (snapshot) => {
 // logic for adding items to the list & db
 
 addButtonEl.addEventListener('click', function() {
+    console.log('add button clicked')
     let inputValue = getInput(inputFieldEl);
-
+    console.log('input value is', inputValue)
     if (validateEntry(re, inputValue, errorMessageText)) {
+        console.log('entry validated')
         push(itemsInListInDB, inputValue);
         console.log(`${inputValue} added to database`);
     } else {
