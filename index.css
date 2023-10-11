@@ -81,6 +81,29 @@ button {
     max-width: 25%;
 }
 
+#google-sign-in,
+#email-input,
+#password-input,
+#log-in-button,
+#create-account {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    height: auto;
+    max-width: 33%;
+    margin: auto;
+    display: block;
+    border: 2px solid;
+    width: 50%;
+}
+
+button.log-in {
+    border-radius: 15px;
+}
+
+input.log-in {
+    border-radius: 0px;
+}
+
 button:hover {
     background-color: var(--bold-blue-opacity);
     color: white;
@@ -115,12 +138,27 @@ header {
     padding: 2em;
     width: 100vw;
     position: absolute;
-    z-index: -10;
     top: 0;
 }
 
 header>nav>ul>li {
     list-style-type: none;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 1.875em;
+}
+
+.icon-btn:hover {
+    transform: scale(1.01);
+}
+
+.icon-img-btn:hover {
+    filter: invert(0.5);
 }
 
 input {
@@ -153,6 +191,8 @@ input[type="checkbox"] {
     font-size: 6em;
     font-family: 'jellyka_castles_queenregular';
     color: var(--bright-pink);
+    width: fit-content;
+    margin: 4rem auto;
 }
 
 .input-container>input {
@@ -218,6 +258,33 @@ main {
     justify-content: center;
 }
 
+.logged-out {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: white;
+}
+
+.logged-out>nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logged-out>nav>ul {
+    width: 100%;
+}
+
+.logged-out-container {
+    width: 100%;
+    margin: .5rem 0px 0px 0px;
+}
 
 .playing-card {
     display: block;

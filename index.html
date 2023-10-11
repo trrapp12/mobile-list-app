@@ -12,31 +12,62 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li class="checkout">checkOUT</li>
-            </ul>
-        </nav>
-    </header>
-    <div class="playing-card">
-    </div>
-    <main>
-        <div class="input-container">
-            <input id="input-field" type="text" name="input-field" placeholder="type item here">
-            <button id="add-button">+</button>
-        </div>
-        <div class="todo-list" id="todo-list"></div>
-    </main>
-    <footer>
-        <a href="https://www.flaticon.com/free-icons/skull" title="skull icons" class="attribution">Skull icons created
-            by Smashicons - Flaticon</a>
-    </footer>
+    <section id="logged-out" class="logged-out">
+        <header>
+            <nav>
+                <ul>
+                    <li class="checkout">You are currently logged out of checkOUT</li>
+                </ul>
+                <button class="log-in" id="google-sign-in">Sign in with Google</button>
+                <div class="logged-out-container">
+                    <input class="log-in" id="email-input" type="email" placeholder="Email">
+                </div>
+                <div class="logged-out-container">
+                    <input class="log-in" id="password-input" type="password" placeholder="Password">
+                </div>
+                <div class="logged-out-container">
+                    <button class="log-in" id="log-in-button">Log In</button>
+                </div>
+                <div class="logged-out-container">
+                    <button class="log-in" id="create-account">Create Account</button>
+                </div>
 
-    <script src="index.js" type="module"></script>
-    <script src="./utils/eventListeners.js" type="module"></script>
-    <script src="./utils/setBrowserCSS.js" type="module"></script>
-    <script src="./utils/simpleInputValidation.js" type="module"></script>
+            </nav>
+        </header>
+    </section>
+    <section id="logged-in-view">
+        <header>
+            <nav>
+                <button id="sign-out-btn" class="icon-btn">
+                    <img src="./assets/icon-sign-out.svg" class="icon-img-btn">
+                </button>
+                <ul>
+                    <li class="checkout">checkOUT</li>
+                </ul>
+            </nav>
+        </header>
+        <div class="playing-card">
+        </div>
+        <main>
+            <div class="input-container">
+                <input id="input-field" type="text" name="input-field" placeholder="type item here">
+                <button id="add-button">+</button>
+            </div>
+            <div class="todo-list" id="todo-list"></div>
+        </main>
+        <footer>
+            <a href="https://www.flaticon.com/free-icons/skull" title="skull icons" class="attribution">Skull icons
+                created
+                by Smashicons - Flaticon</a>
+        </footer>
+    </section>
+    <script src="./dist/bundle.js"></script>
+
+    <!-- <script src="index.js" type="module"></script> -->
+    <script src="./src/utils/eventListeners.js" type="module"></script>
+    <script src="./src/utils/setBrowserCSS.js" type="module"></script>
+    <script src="./src/utils/simpleInputValidation.js" type="module"></script>
+
 </body>
 
 </html>
