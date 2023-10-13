@@ -136,8 +136,6 @@ window.addEventListener('load', () => {
 - [X] using Javascript to imitate a "hover" effect in CSS
 - [X] simplifying and refactoring code and breaking it out into a utility function file
 - [X] AI generated artwork
-- [ ] gamification principles
-- [ ] Oauth
 
 ---
 
