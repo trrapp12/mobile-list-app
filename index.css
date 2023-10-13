@@ -47,6 +47,7 @@
         30.9px 50.6px 66.7px -2.5px hsl(var(--shadow-color) / 0.34);
 }
 
+/* ************************* STYLED ELEMENTS ************************* */
 *,
 *:before,
 *:after {
@@ -55,20 +56,6 @@
     padding: 0px;
     font-family: 'rough_owlregular';
     color: var(--bright-pink)
-}
-
-html {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    scroll-behavior: smooth;
-    background-color: var(--redish-pink);
-    background: hsla(349, 88%, 57%, 1);
-    background: linear-gradient(135deg, hsla(349, 88%, 57%, 1) 0%, hsla(220, 85%, 30%, 1) 100%);
-    background: -moz-linear-gradient(135deg, hsla(349, 88%, 57%, 1) 0%, hsla(220, 85%, 30%, 1) 100%);
-    background: -webkit-linear-gradient(135deg, hsla(349, 88%, 57%, 1) 0%, hsla(220, 85%, 30%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F23054", endColorstr="#0B368C", GradientType=1);
-    overflow-x: hidden;
 }
 
 button {
@@ -81,38 +68,13 @@ button {
     max-width: 25%;
 }
 
-#google-sign-in,
-#email-input,
-#password-input,
-#log-in-button,
-#create-account {
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
-    height: auto;
-    max-width: 33%;
-    margin: auto;
-    display: block;
-    border: 2px solid;
-    width: 50%;
-}
-
-button.log-in {
-    border-radius: 15px;
-}
-
-input.log-in {
-    border-radius: 0px;
-}
-
 button:hover {
     background-color: var(--bold-blue-opacity);
     color: white;
 }
 
-body,
-html {
-    min-height: 100vh;
-    min-width: 100vw;
+button.log-in {
+    border-radius: 15px;
 }
 
 footer {
@@ -135,7 +97,7 @@ h1 {
 }
 
 header {
-    padding: 2em;
+    padding: 4em;
     width: 100vw;
     position: absolute;
     top: 0;
@@ -145,20 +107,24 @@ header>nav>ul>li {
     list-style-type: none;
 }
 
-.icon-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    width: 1.875em;
+html {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    background-color: var(--redish-pink);
+    background: hsla(349, 88%, 57%, 1);
+    background: linear-gradient(135deg, hsla(349, 88%, 57%, 1) 0%, hsla(220, 85%, 30%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(349, 88%, 57%, 1) 0%, hsla(220, 85%, 30%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(349, 88%, 57%, 1) 0%, hsla(220, 85%, 30%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F23054", endColorstr="#0B368C", GradientType=1);
+    overflow-x: hidden;
 }
 
-.icon-btn:hover {
-    transform: scale(1.01);
-}
-
-.icon-img-btn:hover {
-    filter: invert(0.5);
+body,
+html {
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
 input {
@@ -182,9 +148,41 @@ input[type="checkbox"] {
     padding: 0;
 }
 
+main {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 25% auto;
+    top: 25%;
+    position: sticky;
+}
+
+/* ************************* IDS ************************* */
+
+#google-sign-in,
+#email-input,
+#password-input,
+#log-in-button,
+#create-account {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    height: auto;
+    max-width: 33%;
+    margin: auto;
+    display: block;
+    border: 2px solid;
+    width: 50%;
+}
+
+/* ************************* CLASSES ************************* */
 .attribution {
     z-index: 19;
     padding: 0px 0px 0px 12em;
+}
+
+.bold-font {
+    font-family: 'Rubik Mono One', monospace;
 }
 
 .checkout {
@@ -193,6 +191,42 @@ input[type="checkbox"] {
     color: var(--bright-pink);
     width: fit-content;
     margin: 4rem auto;
+    position: absolute;
+    top: 7%;
+    left: 42%;
+    z-index: -1;
+}
+
+.check-in--button-container {
+    margin: 8rem 0rem 0rem 0rem;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 3rem;
+    position: absolute;
+    right: 15%;
+    top: 40%;
+}
+
+.icon-btn:hover {
+    transform: scale(1.01);
+    background-color: #0b368c00;
+}
+
+.icon-img-btn {
+    width: 100%;
+}
+
+.icon-img-btn:hover {
+    filter: invert(0.5);
+}
+
+input.log-in {
+    border-radius: 0px;
 }
 
 .input-container>input {
@@ -220,31 +254,6 @@ input[type="checkbox"] {
     width: 75%;
 }
 
-main {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 25% auto;
-    top: 25%;
-    position: sticky;
-}
-
-.todo-list {
-    color: white;
-    font-size: 1.5em;
-    list-style-type: none;
-    font-weight: 900;
-    background-color: var(--bold-blue-opacity);
-    padding: 1em;
-    border: 5px solid #ffffff90;
-    width: 75%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: space-evenly;
-}
 
 .list-div {
     padding: 0px 20px;
@@ -304,6 +313,30 @@ main {
     top: 10%;
     transition: all 500ms;
     box-shadow: var(--shadow-elevation-medium);
+}
+
+.todo-list {
+    color: white;
+    font-size: 1.5em;
+    list-style-type: none;
+    font-weight: 900;
+    background-color: var(--bold-blue-opacity);
+    padding: 1em;
+    border: 5px solid #ffffff90;
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-evenly;
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    color: var(--bold-blue);
 }
 
 .todo-list {

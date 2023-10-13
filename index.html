@@ -9,6 +9,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,20 +19,23 @@
         <header>
             <nav>
                 <ul>
-                    <li class="checkout">You are currently logged out of checkOUT</li>
+                    <li class="title bold-font">You are currently logged out of</li>
+                    <li class="checkout">checkOUT</li>
                 </ul>
-                <button class="log-in" id="google-sign-in">Sign in with Google</button>
-                <div class="logged-out-container">
-                    <input class="log-in" id="email-input" type="email" placeholder="Email">
-                </div>
-                <div class="logged-out-container">
-                    <input class="log-in" id="password-input" type="password" placeholder="Password">
-                </div>
-                <div class="logged-out-container">
-                    <button class="log-in" id="log-in-button">Log In</button>
-                </div>
-                <div class="logged-out-container">
-                    <button class="log-in" id="create-account">Create Account</button>
+                <div class="check-in--button-container">
+                    <button class="log-in" id="google-sign-in">Sign in with Google</button>
+                    <div class="logged-out-container">
+                        <input class="log-in" id="email-input" type="email" placeholder="Email">
+                    </div>
+                    <div class="logged-out-container">
+                        <input class="log-in" id="password-input" type="password" placeholder="Password">
+                    </div>
+                    <div class="logged-out-container">
+                        <button class="log-in" id="log-in-button">Log In</button>
+                    </div>
+                    <div class="logged-out-container">
+                        <button class="log-in" id="create-account">Create Account</button>
+                    </div>
                 </div>
 
             </nav>
@@ -39,7 +45,7 @@
         <header>
             <nav>
                 <button id="sign-out-btn" class="icon-btn">
-                    <img src="./assets/icon-sign-out.svg" class="icon-img-btn">
+                    <img src="./assets/exit.png" class="icon-img-btn">
                 </button>
                 <ul>
                     <li class="checkout">checkOUT</li>
