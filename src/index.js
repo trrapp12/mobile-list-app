@@ -8,8 +8,8 @@ import { getDatabase,
 import { getInput, 
     resetInputField, 
     clearList,
-     validateEntry
-    } from './utils/util-functions.js'
+    validateEntry
+    } from './utils/util-functions.js';
 import { getAuth, 
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
@@ -20,6 +20,7 @@ import { getAuth,
 } from "firebase/auth";
 
 console.log('index.js fired')
+console.log(validateEntry)
 
 // ********************  FIREBASE CONFIG  ********************  
 const firebaseConfig = {
@@ -38,13 +39,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const user = auth.currentUser;
-let userI
 const provider = new GoogleAuthProvider();
-
-if (user) {
-    const userID = user.uid
-}
-
 
 // ********************  CONSTANTS  ********************  
 
@@ -92,6 +87,7 @@ function authSignInWithGoogle () {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
+        // startDataBaseOnSuccessfulLogin(user);
         // IdP data available using getAdditionalUserInfo(result)
         // ...
         clearAuthFields();
@@ -116,6 +112,7 @@ function signInEmailPassword () {
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
+    //   startDataBaseOnSuccessfulLogin(user);
       clearAuthFields()
       // ...
     })
@@ -131,7 +128,8 @@ onAuthStateChanged(auth, (user) => {
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/auth.user
       showLoggedInView();
-      const uid = user.uid;
+      startDataBaseOnSuccessfulLogin(user);
+
       // ...
     } else {
         showloggedOutView();
@@ -139,6 +137,36 @@ onAuthStateChanged(auth, (user) => {
       // ...
     }
   });
+
+function startDataBaseOnSuccessfulLogin(user) {
+    const uid = user.uid;
+    const database = getDatabase(app);
+    const itemsInListInDB = ref(database, `items/${user.uid}`);
+    console.log('user logged in: ' + uid, database, itemsInListInDB)
+    onValue(itemsInListInDB, (snapshot) => {
+      let currentItemKey;
+      let currentItemValue;
+      clearList(shoppingListContainer);
+  
+      if (snapshot.exists()) {
+          let itemsArray = Object.entries(snapshot.val())
+          console.log(itemsArray)
+          itemsArray.map(item => {
+              currentItemKey = item[0];
+              currentItemValue = item[1];
+              createList(shoppingListContainer, currentItemValue, currentItemKey, ref)
+              console.log(item[0])
+          })
+      } else {
+          shoppingListContainer.innerHTML = 'No items here...yet!'
+      }
+  
+      resetInputField(inputFieldEl);
+  })
+  addButtonEl.addEventListener('click', () => {
+    addItemEventListener(database, itemsInListInDB)
+  })
+}
 
 // Initialize Firebase Authentication and get a reference to the service
 function createUserEmailPassword () {
@@ -148,6 +176,7 @@ function createUserEmailPassword () {
         .then((userCredential) => {
           // Signed up 
           const user = userCredential.user;
+        //   startDataBaseOnSuccessfulLogin(user);
           // ...
           clearAuthFields()
         })
@@ -196,47 +225,20 @@ function clearAuthFields() {
 	clearInputField(emailInputEl)
 	clearInputField(passwordInputEl)
 }
-// setup Firebase app
-
-const database = getDatabase(app);
-const itemsInListInDB = ref(database, `items/${user.uid}`);
-
-onValue(itemsInListInDB, (snapshot) => {
-    let currentItemKey;
-    let currentItemValue;
-    clearList(shoppingListContainer);
-
-    if (snapshot.exists()) {
-        let itemsArray = Object.entries(snapshot.val())
-        console.log(itemsArray)
-        itemsArray.map(item => {
-            currentItemKey = item[0];
-            currentItemValue = item[1];
-            createList(shoppingListContainer, currentItemValue, currentItemKey, ref)
-            console.log(item[0])
-        })
-    } else {
-        shoppingListContainer.innerHTML = 'No items here...yet!'
-    }
-
-    resetInputField(inputFieldEl);
-})
 
 // logic for adding items to the list & db
-
-addButtonEl.addEventListener('click', function() {
+function addItemEventListener(database, itemsInListInDB) {
+    console.log(database, itemsInListInDB)
+    // const itemsInListInDB = ref(database, `items/${user.uid}`);
     console.log('add button clicked')
     let inputValue = getInput(inputFieldEl);
     console.log('input value is', inputValue)
-    if (validateEntry(re, inputValue, errorMessageText)) {
-        console.log('entry validated')
-        push(itemsInListInDB, inputValue);
-        console.log(`${inputValue} added to database`);
-    } else {
-        console.log('invalid entry: following characters are not accepted...^!#$%*()/\{}`~<>_')
-    }
+    push(itemsInListInDB, inputValue);
+    console.log(`${inputValue} added to database`);
 
-})
+}
+
+
 
 function createList (el, value, id) {
     let newDiv = document.createElement('div');
