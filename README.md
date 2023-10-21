@@ -31,11 +31,11 @@
 >
 > — Ryan Holiday, Daily Stoic.
 
-The mission of checkOUT is to inspire you to checkoff your bucket list before you checkout of life.  It does it by:
+*The mission of checkOUT is to inspire you to checkoff your bucket list before you checkout of life.  It does it by:*
 
-* providing a progressive web app with CRD (create, read, delete) functionality that fits in the palm of your hand
-* adds distinctive rewards when you complete your tasks
-* provides it in a well designed, mobile-first, responsive layout
+*- providing a progressive web app with CRD (create, read, delete) functionality that fits in the palm of your hand*
+*- adds distinctive rewards when you complete your tasks*8
+*- provides it in a well designed, mobile-first, responsive layout*
 
 
 ---
