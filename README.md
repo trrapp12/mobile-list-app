@@ -1,6 +1,12 @@
 # checkOUT before you CHECKout
 
-### Contributors: Trevor Rapp
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8d2ebbad-c69b-4675-8927-bcf37d842773/deploy-status)](https://app.netlify.com/sites/gentle-monstera-8c285d/deploys)
+
+<br/>
+
+---
+
+#### Contributors: Trevor Rapp
 
 *significantly redesigned and refactored, based on a [Scrimba Project](https://scrimba.com/learn/frontend/lets-build-a-mobile-app-with-firebase-coafc415fb8e007eadfa60822) by Rafid Hoda.*  
 
