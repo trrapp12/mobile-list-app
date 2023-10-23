@@ -145,15 +145,23 @@ window.addEventListener('load', () => {
 
 ```
 
+<br/>
+
 ---
 
 ### MY OWN PERSONAL CONTRIBUTIONS INCLUDED 
 
 - [X] complete graphic redesign
+      
 - [X] instead of dynamically creating one element, built it out to dynamically build out a nested element that also dynamically assigned classes, attributes, and added an eventlistener
+      
 - [X] using Javascript to imitate a "hover" effect in CSS
+      
 - [X] simplifying and refactoring code and breaking it out into a utility function file
+      
 - [X] AI generated artwork
+
+<br/>
 
 ---
 
@@ -162,6 +170,8 @@ window.addEventListener('load', () => {
 <a href="https://www.flaticon.com/free-icons/skull" title="skull icons">Skull icons created by Smashicons - Flaticon</a>
 
 Memento Mori is AI generated artwork by Trevor Rapp using <a href="https://www.imagine.art/">Imagine Art</a>.
+
+<br/>
 
 ---
 
