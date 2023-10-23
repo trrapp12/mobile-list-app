@@ -8,7 +8,7 @@
 
 #### Contributors: Trevor Rapp
 
-*significantly redesigned and refactored, based on a [Scrimba Project](https://scrimba.com/learn/frontend/lets-build-a-mobile-app-with-firebase-coafc415fb8e007eadfa60822) by Rafid Hoda.*  
+*significantly redesigned and refactored, based on an instructor lead project, [Scrimba Project](https://scrimba.com/learn/frontend/lets-build-a-mobile-app-with-firebase-coafc415fb8e007eadfa60822), by Rafid Hoda.*  
 
 <br/>
 
