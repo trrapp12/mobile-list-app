@@ -52,7 +52,7 @@
 
 ### QUICKSTART GUIDE
 
-To use the app simply click on the ```View Project``` button or visit <a href="https://gentle-monstera-8c285d.netlify.app/">https://gentle-monstera-8c285d.netlify.app/</a>. 
+To use the app simply click on the ```View Project``` button, or visit <a href="https://gentle-monstera-8c285d.netlify.app/">https://gentle-monstera-8c285d.netlify.app/</a>. 
 
 <br/>
 
@@ -60,31 +60,31 @@ To use the app simply click on the ```View Project``` button or visit <a href="h
 
 ### THIS PROJECT DEMONSTRATES:
 
-🆕 CRD (create, read, delete) functionality with a firebase database
+- [X] CRD (create, read, delete) functionality with a firebase database
 
-🆕 email and password authentication and OAuth with Gmail.
+- [X] email and password authentication and OAuth with Gmail.
 
-🆕 deploy progressive web app to Netlify
+- [X] deploy progressive web app to Netlify
 
-🆕 Utilizing getDatabase(), ref(), push(), onValue(), and remove() methods for firebase database
+- [X] Utilizing getDatabase(), ref(), push(), onValue(), and remove() methods for firebase database
 
-🆕 Creating and importing utility functions
+- [X] Creating and importing utility functions
 
-🆕 Dynamically creating, assigning attributes, and appending nested elements in vanilla javascript
+- [X] Dynamically creating, assigning attributes, and appending nested elements in vanilla javascript
 
-🆕 Using webmanifest
+- [X] Using webmanifest
 
-🆕 Converting objects to arrays
+- [X] Converting objects to arrays
 
-🆕 Mapping through arrays
+- [X] Mapping through arrays
 
-🆕 String literals 
+- [X] String literals 
 
-🆕 Flex-box
+- [X] Flex-box
 
-🆕 Responsive, mobile first design
+- [X] Responsive, mobile first design
 
-🆕 Utilizing git and github for CVN
+- [X] Utilizing git and github for CVN
 
 ---
 
